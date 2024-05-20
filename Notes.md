@@ -1,9 +1,12 @@
-* Docker creates intermediate images for running commands then terminates it after perserving it's filesystem and also saves the primary command (CMD).
+# Course notes
+
+* Docker creates intermediate images for running commands then terminates them after perserving it's filesystem and also saves the primary command (CMD).
 
 * Docker caches previous runs and only updates/processes additions to dockerfile only. And order of operations __Really Matters__.
 * To tag a docker image, We use __DOCKER_ID/CONTAINER_NAME:VERSION__
 * Docker can commit/create a container from the CLI
 Example
+
 ```bash
 docker run -it alpine sh
 # INSIDE THAT container run
@@ -12,3 +15,26 @@ apk add --update redis
 # Get previous container_id, Let's call it X using `docker ps`
 docker commit -c 'CMD ["redis-server"]' CONTAINER_X_ID
 ```
+  
+*** End Section 3
+
+* Try to use a baseImage that has the packages that you need
+* Must copy the files to your docker image so that all of your required files are there.
+  
+```docker
+COPY FROM_PATH TO_PATH
+```
+
+* We can do port mapping if we want to make requests to ports to our docker container
+
+```bash
+docker run -p YOUR_PORT_NUMBER:DOCKER_PORT_NUMBER IMG_NAME
+```
+
+* You can set a working directory in the docker imge using
+
+```docker
+WORKDIR ABSOLUTE_PATH_TO_WORKDIR
+```
+
+*** End Section 4
