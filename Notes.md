@@ -38,3 +38,9 @@ WORKDIR ABSOLUTE_PATH_TO_WORKDIR
 ```
 
 *** End Section 4
+
+* To have inter-container communication/networking we can use Docker compose or Docker CLI's Network features. (But Docker Compose is more commonly used)
+
+* Restart policies tells docker when to restart containers if they crash.
+
+*** End Section 5
