@@ -44,3 +44,18 @@ WORKDIR ABSOLUTE_PATH_TO_WORKDIR
 * Restart policies tells docker when to restart containers if they crash.
 
 *** End Section 5
+
+* Instead of specifying volumes in docker run, We can use docker-compose.
+  
+* We can add a separate entry in `docker-compose.yml` for running tests.
+
+* `nginx` can be used as a server to serve the production build of react apps when using `docker`
+
+* We can copy resources from different steps by declaring it using the keyword `as` and then using the --from argument when copying
+
+```docker
+FROM node:alpine as X
+COPY --from=X FROM_PATH TO_PATH
+```
+
+*** End Section 6
