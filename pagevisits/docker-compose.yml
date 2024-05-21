@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always # Tells docker to restart the node-app container if it crashes.
+    build: . # Looks for a Dockerfile in the current directory.
+    ports:
+      - "8081:8081" # LOCAL_MACHINE:INSIDE_CONTAINER / Dashes are used to create arrays/multiple-val entries.
