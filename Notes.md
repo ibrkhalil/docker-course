@@ -59,6 +59,7 @@ COPY --from=X FROM_PATH TO_PATH
 ```
 
 *** End Section 6
+
 Kubernetes main use-case is horizontal scaling. for now lol 😆
 
 Kubernetes expects images to be prebuilt, While docker can optionally build them for us.
