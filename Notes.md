@@ -59,3 +59,7 @@ COPY --from=X FROM_PATH TO_PATH
 ```
 
 *** End Section 6
+
+Kubernetes expected images to be prebuilt, While docker can optionally build them for us.
+One config file per 'object' on Kubernetes while docker can have a single docker-compose.yml file
+Manual networking on Kubernetes is required compared to the automagical networking that docker had.
