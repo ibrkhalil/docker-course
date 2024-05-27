@@ -59,7 +59,15 @@ COPY --from=X FROM_PATH TO_PATH
 ```
 
 *** End Section 6
+Kubernetes main use-case is horizontal scaling. for now lol 😆
 
-Kubernetes expected images to be prebuilt, While docker can optionally build them for us.
+Kubernetes expects images to be prebuilt, While docker can optionally build them for us.
 One config file per 'object' on Kubernetes while docker can have a single docker-compose.yml file
 Manual networking on Kubernetes is required compared to the automagical networking that docker had.
+
+Pods in Kubernetes are a grouping of container(s).
+Services in Kubernetes are used to setup networking between Kubernetes objects.
+Tightly-coupled/highly-interdependent containers/services must be deployed in the same Pod.
+Selectors/Labels allows us to direct traffic from Services to Pods.
+Kuberenetes saves us a lot of time by doing it's operations declaratively, And they __can__ be done imperatively too.
+
